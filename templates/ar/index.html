@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="قميص المنتخب المغربي الأصلي - جودة عالية وتوصيل سريع" />
+  <title>M&A Elite Kits ✦ — قميص المنتخب المغربي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}" />
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-brand">
+      <span>M&A Elite Kits ✦</span>
+    </div>
+      <div class="navbar-lang">
+      <a href="/ar" class="lang-link active">العربية</a>
+      <a href="/fr" class="lang-link">Français</a>
+      <a href="/en" class="lang-link">English</a>
+    </div>
+    <div class="navbar-ctas">
+      <a href="#order" class="btn-nav btn-nav-order">
+        <i class="fas fa-shopping-bag"></i> اطلب الآن
+      </a>
+      <a href="https://wa.me/{{ whatsapp_phone|replace('+','')|replace(' ','')|replace('-','') }}" target="_blank" class="btn-nav btn-nav-wa">
+        <i class="fab fa-whatsapp"></i> واتساب
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-pill">
+        <i class="fas fa-star" style="color:var(--gold-light)"></i>
+        كأس العالم 2026 🇲🇦
+      </div>
+      <h1 class="hero-title">
+        قميص المنتخب المغربي الأصلي<br>
+        <span class="accent">الأصلي PUMA</span>
+      </h1>
+      <p class="hero-subtitle">
+        جودة عالية وتصميم فريد - اطلب الآن!
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">
+          <i class="fas fa-cart-shopping"></i> اطلب الآن
+        </button>
+        <a href="https://wa.me/{{ whatsapp_phone|replace('+','')|replace(' ','')|replace('-','') }}" target="_blank" class="btn-wa">
+          <i class="fab fa-whatsapp"></i> تواصل معنا عبر واتساب
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="main-image-wrap">
+        <img src="static/images/maroc-shirt-front.jpg" alt="قميص المنتخب المغربي" id="mainImg" />
+      </div>
+      <div class="gallery-strip">
+        <img src="static/images/maroc-shirt-front.jpg" class="gallery-thumb active" onclick="switchImg(this)" alt="الصورة الأمامية" />
+        <img src="static/images/maroc-shirt-back.jpg"  class="gallery-thumb" onclick="switchImg(this)" alt="الصورة الخلفية" />
+        <img src="static/images/maroc-shirt-full.jpg"  class="gallery-thumb" onclick="switchImg(this)" alt="الصورة الكاملة" />
+        <img src="static/images/maroc-shirt-logo.jpg"  class="gallery-thumb" onclick="switchImg(this)" alt="شعار القميص" />
+        <img src="static/images/maroc-shirt-collar.jpg" class="gallery-thumb" onclick="switchImg(this)" alt="ياقة القميص" />
+        <img src="static/images/maroc-shirt-sleeve.jpg" class="gallery-thumb" onclick="switchImg(this)" alt="كم القميص" />
+      </div>
+      <div class="color-options">
+        <span class="color-label">الألوان المتاحة:</span>
+        <span class="color-swatch red">أحمر</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUST BAR ══ -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-item"><i class="fas fa-shield-halved"></i><span>منتج PUMA رسمي</span></div>
+    <div class="trust-item"><i class="fas fa-hand-holding-dollar"></i><span>الدفع عند الاستلام</span></div>
+    <div class="trust-item"><i class="fas fa-truck-fast"></i><span>توصيل 24–72 ساعة</span></div>
+    <div class="trust-item"><i class="fab fa-whatsapp"></i><span>دعم 7 أيام / 7</span></div>
+  </div>
+</div>
+
+<!-- ══ OFFERS / PRICING ══ -->
+<section class="section section-alt" id="offers">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">عروض خاصة</div>
+      <h2 class="section-title">كلما طلبت أكثر، وفرت أكثر</h2>
+      <p class="section-sub">اختر الكمية المناسبة واستفد من خصوماتنا الحصرية</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card" onclick="selectPricing(1,159)">
+        <div class="qty-icons">👕</div>
+        <div class="qty-label">قميص واحد</div>
+        <div class="qty-name">فردي</div>
+        <div class="price-dh">159 <small>DH</small></div>
+        <div class="price-save">السعر الأساسي</div>
+      </div>
+      <div class="pricing-card featured" onclick="selectPricing(2,259)">
+        <div class="badge-best">⭐ الأكثر طلباً</div>
+        <div class="qty-icons">👕👕</div>
+        <div class="qty-label">قميصان</div>
+        <div class="qty-name">ثنائي</div>
+        <div class="price-dh">259 <small>DH</small></div>
+        <div class="price-save">وفر 59 DH</div>
+      </div>
+      <div class="pricing-card" onclick="selectPricing(3,329)">
+        <div class="qty-icons">👕👕👕</div>
+        <div class="qty-label">3 قمصان</div>
+        <div class="qty-name">الثلاثي</div>
+        <div class="price-dh">329 <small>DH</small></div>
+        <div class="price-save">وفر 148 DH</div>
+      </div>
+      <div class="pricing-card" onclick="selectPricing(4,399)">
+        <div class="qty-icons">👕👕👕👕</div>
+        <div class="qty-label">4 قمصان</div>
+        <div class="qty-name">العائلي</div>
+        <div class="price-dh">399 <small>DH</small></div>
+        <div class="price-save">وفر 237 DH 🔥</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SIZE GUIDE ══ -->
+<section class="section" id="sizes">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">دليل المقاسات</div>
+      <h2 class="section-title">اختر مقاسك المناسب</h2>
+      <p class="section-sub">في حال الشك بين مقاسين، اختر المقاس الأكبر</p>
+    </div>
+    <div class="sizes-grid">
+      <div class="size-card" onclick="selectSize('M',this)">
+        <div class="size-letter">M</div>
+        <div class="size-range">55–65 كغ</div>
+        <div class="size-name">متوسط</div>
+      </div>
+      <div class="size-card active" onclick="selectSize('L',this)">
+        <div class="size-letter">L</div>
+        <div class="size-range">65–75 كغ</div>
+        <div class="size-name">كبير</div>
+      </div>
+      <div class="size-card" onclick="selectSize('XL',this)">
+        <div class="size-letter">XL</div>
+        <div class="size-range">75–85 كغ</div>
+        <div class="size-name">كبير جداً</div>
+      </div>
+      <div class="size-card" onclick="selectSize('XXL',this)">
+        <div class="size-letter">XXL</div>
+        <div class="size-range">85–95 كغ</div>
+        <div class="size-name">كبير جداً جداً</div>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:0.83rem;margin-top:18px;">
+      <i class="fas fa-circle-info" style="color:var(--gold-light)"></i>
+      جميع الصور حقيقية — سنتواصل معك بنفس المنتج الموجود في الصور
+    </p>
+  </div>
+</section>
+
+<!-- ══ ORDER FORM ══ -->
+<section class="section" id="order">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">طلب سريع</div>
+      <h2 class="section-title">اطلب الآن</h2>
+      <p class="section-sub">املأ النموذج — التوصيل خلال 24 ساعة</p>
+    </div>
+
+    <div class="order-wrap">
+      <div class="order-header">
+        <h3>🛒 نموذج الطلب</h3>
+        <p>اختر الكمية والمقاسات، ثم أدخل بياناتك وسنتواصل معك عبر واتساب</p>
+      </div>
+      <div class="order-body">
+
+        <!-- Quantity selector -->
+        <p style="font-weight:700;margin-bottom:12px;font-size:0.9rem;color:#bbb;">الكمية:</p>
+        <div class="qty-selector" id="qtySel">
+          <div class="qty-btn active" data-qty="1" data-price="159" onclick="pickQty(this)">
+            <div class="q-num">1</div>
+            <div class="q-label">قميص</div>
+            <div class="q-price">159 DH</div>
+          </div>
+          <div class="qty-btn" data-qty="2" data-price="259" onclick="pickQty(this)">
+            <div class="q-badge">الأكثر طلباً</div>
+            <div class="q-num">2</div>
+            <div class="q-label">قمصان</div>
+            <div class="q-price">259 DH</div>
+            <div class="q-save">وفر 59 DH</div>
+          </div>
+          <div class="qty-btn" data-qty="3" data-price="329" onclick="pickQty(this)">
+            <div class="q-num">3</div>
+            <div class="q-label">قمصان</div>
+            <div class="q-price">329 DH</div>
+            <div class="q-save">وفر 148 DH</div>
+          </div>
+          <div class="qty-btn" data-qty="4" data-price="399" onclick="pickQty(this)">
+            <div class="q-num">4</div>
+            <div class="q-label">قمصان</div>
+            <div class="q-price">399 DH</div>
+            <div class="q-save">وفر 237 DH 🔥</div>
+          </div>
+        </div>
+
+        <!-- Per-shirt detail rows -->
+        <p style="font-weight:700;margin-bottom:12px;font-size:0.9rem;color:#bbb;">تفاصيل الطلب:</p>
+        <div class="order-items" id="orderItems">
+          <!-- dynamically generated -->
+        </div>
+
+        <!-- Customer info -->
+        <div class="form-grid">
+          <div class="form-field" id="field-name">
+            <label>الاسم الكامل *</label>
+            <input type="text" id="cName" placeholder="اسمك" />
+            <span class="err">الاسم غير صحيح</span>
+          </div>
+          <div class="form-field" id="field-phone">
+            <label>رقم الهاتف *</label>
+            <input type="tel" id="cPhone" placeholder="06XXXXXXXX" />
+            <span class="err">رقم الهاتف غير صحيح</span>
+          </div>
+          <div class="form-field full" id="field-city">
+            <label>المدينة *</label>
+            <input type="text" id="cCity" placeholder="الدار البيضاء، الرباط، مراكش..." />
+            <span class="err">الرجاء إدخال المدينة</span>
+          </div>
+          <div class="form-field full">
+            <label>العنوان (اختياري)</label>
+            <input type="text" id="cAddr" placeholder="الحي، الشارع..." />
+          </div>
+        </div>
+
+        <!-- Total -->
+        <div class="order-total">
+          <div>
+            <div class="label">المجموع</div>
+            <div class="sub">التوصيل مجاني <i class="fas fa-check"></i></div>
+          </div>
+          <div class="amount" id="totalAmount">159 DH</div>
+        </div>
+
+        <button class="btn-submit" id="submitBtn" onclick="submitOrder()">
+          <i class="fab fa-whatsapp"></i> إرسال الطلب
+        </button>
+
+        <div class="form-trust">
+          <span><i class="fas fa-shield-halved"></i> الدفع عند الاستلام</span>
+          <span><i class="fas fa-truck-fast"></i> توصيل 24–72 ساعة</span>
+          <span><i class="fab fa-whatsapp"></i> تأكيد فوري</span>
+        </div>
+
+        <div class="msg success" id="msgSuccess">
+          <h4><i class="fas fa-circle-check"></i> تم إرسال طلبك بنجاح! شكراً لك.</h4>
+          <p>سيتواصل معك فريقنا قريباً عبر واتساب لتأكيد الطلب والتسليم.</p>
+        </div>
+        <div class="msg error-msg" id="msgError">
+          <h4><i class="fas fa-circle-exclamation"></i> خطأ</h4>
+          <p id="msgErrorText">يرجى ملء جميع الحقول المطلوبة بشكل صحيح.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FEATURES ══ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">لماذا تختار M&A Elite Kits؟</div>
+      <h2 class="section-title">لماذا تختار M&A Elite Kits؟</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
+        <h4>توصيل 24–72 ساعة</h4>
+        <p>في جميع أنحاء المغرب — بما فيها المدن الصغيرة</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+        <h4>الدفع عند الاستلام</h4>
+        <p>ادفع بعد استلام طردك — لا مخاطرة، لا مفاجآت</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+        <h4>جودة عالية</h4>
+        <p>أفضل المواد المستخدمة في الصناعة</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fab fa-whatsapp"></i></div>
+        <h4>دعم 7 أيام / 7</h4>
+        <p>نرد على واتساب بسرعة من 8 صباحاً حتى 10 مساءً</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ POLICIES ACCORDION ══ -->
+<section class="section" id="policies">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">معلومات مهمة</div>
+      <h2 class="section-title">سياساتنا</h2>
+      <p class="section-sub">شفافية تامة في كل خطوة من خطوات طلبك</p>
+    </div>
+
+    <div class="policies-list">
+
+      <!-- 1. Paiement à la livraison -->
+      <div class="policy-item" id="pol-1">
+        <button class="policy-trigger" onclick="togglePolicy('pol-1')">
+          <span class="policy-icon"><i class="fas fa-hand-holding-dollar"></i></span>
+          <span class="policy-label">سياسة الدفع عند الاستلام</span>
+          <span class="policy-chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="policy-body">
+          <div class="policy-body-title">سياسة الدفع عند الاستلام</div>
+          <p>نحن نقدم الدفع عند الاستلام في جميع أنحاء المغرب. تدفع نقداً إلى المندوب بدون أي دفعة مسبقة. المبلغ المدرج هو المبلغ النهائي، والتوصيل مشمول.</p>
+        </div>
+      </div>
+
+      <!-- 2. Garantie 7 jours -->
+      <div class="policy-item" id="pol-2">
+        <button class="policy-trigger" onclick="togglePolicy('pol-2')">
+          <span class="policy-icon"><i class="fas fa-medal"></i></span>
+          <span class="policy-label">ضمان 7 أيام</span>
+          <span class="policy-chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="policy-body">
+          <div class="policy-body-title">ضمان 7 أيام</div>
+          <p>لديك 7 أيام بعد استلام الطلب لطلب استرداد أو استبدال. لأي طلب، اتصل بنا عبر واتساب أو من خلال صفحة الاتصال.</p>
+        </div>
+      </div>
+
+      <!-- 3. Livraison -->
+      <div class="policy-item" id="pol-3">
+        <button class="policy-trigger" onclick="togglePolicy('pol-3')">
+          <span class="policy-icon"><i class="fas fa-box"></i></span>
+          <span class="policy-label">سياسة التوصيل</span>
+          <span class="policy-chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="policy-body">
+          <div class="policy-body-title">سياسة التوصيل</div>
+          <p>نقوم بالتوصيل في جميع أنحاء المغرب خلال 2 إلى 4 أيام عمل. التوصيل مجاني على جميع الطلبات.</p>
+        </div>
+      </div>
+
+      <!-- 4. Retour -->
+      <div class="policy-item" id="pol-4">
+        <button class="policy-trigger" onclick="togglePolicy('pol-4')">
+          <span class="policy-icon"><i class="fas fa-rotate-left"></i></span>
+          <span class="policy-label">سياسة الاسترجاع</span>
+          <span class="policy-chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="policy-body">
+          <div class="policy-body-title">سياسة الاسترجاع</div>
+          <p>لديك 7 أيام بعد استلام الطلب لإرجاع منتج. يجب أن يكون المنتج في حالته الأصلية، غير مستخدم وغير مغسول. لبدء الاسترجاع، اتصل بنا عبر واتساب أو من خلال صفحة الاتصال.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="logo-badge" style="width:38px;height:38px;background:linear-gradient(135deg,var(--red),var(--red-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;color:#fff;font-size:15px;"></div>
+          <span style="font-weight:900;color:var(--white)">M&A Elite Kits</span>
+        </div>
+        <p>قميص المنتخب المغربي الأصلي — هيا أسود الأطلس، كأس العالم 2026 🇲🇦</p>
+        <a href="https://wa.me/{{ whatsapp_phone|replace('+','')|replace(' ','')|replace('-','') }}" target="_blank" class="footer-wa">
+          <i class="fab fa-whatsapp"></i> اتصل بنا عبر واتساب
+        </a>
+      </div>
+      <div class="footer-col">
+        <h5>روابط سريعة</h5>
+        <ul>
+          <li><a href="#offers">العروض والأسعار</a></li>
+          <li><a href="#sizes">دليل المقاسات</a></li>
+          <li><a href="#order">اطلب الآن</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>ضمانات الجودة</h5>
+        <ul>
+          <li>🛡️ منتج PUMA رسمي</li>
+          <li>💳 الدفع عند الاستلام</li>
+          <li>🚚 توصيل سريع 24–72 ساعة</li>
+          <li>📸 الصور حقيقية للمنتج</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 M&A Elite Kits ✦ جميع الحقوق محفوظة
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/{{ whatsapp_phone|replace('+','')|replace(' ','')|replace('-','') }}" target="_blank" class="float-wa">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ══ SCRIPTS ══ -->
+<script>
+  window.APP = {
+    PRICES: {{ {'1':159,'2':259,'3':329,'4':399} | tojson }},
+    SIZES: {{ ['M','L','XL','XXL'] | tojson }},
+    COLORS: ["أحمر"],
+    ORDER_ITEM_LABEL: "قميص",
+    MSG_INVALID_ORDER: "يرجى ملء جميع الحقول المطلوبة بشكل صحيح.",
+    WA_NUM: '{{ whatsapp_phone|replace("+","") }}'
+  };
+</script>
+<script src="{{ url_for('static', filename='js/site.js') }}"></script>
+</body>
+</html>
