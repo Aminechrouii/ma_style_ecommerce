@@ -89,7 +89,7 @@ ORDER_PRICES = {1: 199, 2: 299, 3: 399, 4: 499, 5: 599, 6: 699, 7: 799, 8: 899, 
 @app.route('/')
 @app.route('/index')
 def index():
-    return redirect('/fr')
+    return redirect('/en')
 
 
 @app.route('/ar')
