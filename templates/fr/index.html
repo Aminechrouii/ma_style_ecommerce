@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Maillot officiel de l'équipe du Maroc - qualité premium et livraison rapide" />
-  <title>M&A Elite Kits ✦ — Maillot de l'équipe du Maroc</title>
+  <meta name="description" content="Maillot officiel de l'équipe nationale marocaine - Haute qualité, livraison rapide" />
+  <title>M&A Elite Kits ✦ — Maillot de l'Équipe du Maroc</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -18,7 +18,7 @@
     <div class="navbar-brand">
       <span>M&A</span>
     </div>
-      <div class="navbar-lang">
+    <div class="navbar-lang">
       <a href="/ar" class="lang-link">AR</a>
       <a href="/fr" class="lang-link active">Fr</a>
       <a href="/en" class="lang-link">Eng</a>
@@ -35,15 +35,15 @@
         Coupe du Monde 2026 🇲🇦
       </div>
       <h1 class="hero-title">
-        Maillot Officiel de l'équipe du Maroc<br>
-        <span class="accent">Officiel PUMA</span>
+        Maillot Officiel de l'Équipe du Maroc<br>
+        <span class="accent">PUMA Authentique</span>
       </h1>
       <p class="hero-subtitle">
-        Qualité Premium et Design Unique - Commandez Maintenant!
+        Haute qualité, design unique — Commandez maintenant !
       </p>
       <div class="hero-actions">
         <button class="btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">
-          <i class="fas fa-cart-shopping"></i> Commander
+          <i class="fas fa-cart-shopping"></i> Commander maintenant
         </button>
         <a href="https://wa.me/{{ whatsapp_phone|replace('+','')|replace(' ','')|replace('-','') }}" target="_blank" class="btn-wa">
           <i class="fab fa-whatsapp"></i> Contactez-nous sur WhatsApp
@@ -56,15 +56,15 @@
         <img src="static/images/maroc-shirt-front.jpg" alt="Maillot de l'équipe du Maroc" id="mainImg" />
       </div>
       <div class="gallery-strip">
-        <img src="static/images/maroc-shirt-front.jpg" class="gallery-thumb active" onclick="switchImg(this)" alt="Avant" />
-        <img src="static/images/maroc-shirt-back.jpg"  class="gallery-thumb" onclick="switchImg(this)" alt="Arrière" />
+        <img src="static/images/maroc-shirt-front.jpg" class="gallery-thumb active" onclick="switchImg(this)" alt="Vue avant" />
+        <img src="static/images/maroc-shirt-back.jpg"  class="gallery-thumb" onclick="switchImg(this)" alt="Vue arrière" />
         <img src="static/images/maroc-shirt-full.jpg"  class="gallery-thumb" onclick="switchImg(this)" alt="Vue complète" />
-        <img src="static/images/maroc-shirt-logo.jpg"  class="gallery-thumb" onclick="switchImg(this)" alt="Logo" />
-        <img src="static/images/maroc-shirt-collar.jpg" class="gallery-thumb" onclick="switchImg(this)" alt="Col" />
-        <img src="static/images/maroc-shirt-sleeve.jpg" class="gallery-thumb" onclick="switchImg(this)" alt="Manche" />
+        <img src="static/images/maroc-shirt-logo.jpg"  class="gallery-thumb" onclick="switchImg(this)" alt="Logo du maillot" />
+        <img src="static/images/maroc-shirt-collar.jpg" class="gallery-thumb" onclick="switchImg(this)" alt="Col du maillot" />
+        <img src="static/images/maroc-shirt-sleeve.jpg" class="gallery-thumb" onclick="switchImg(this)" alt="Manche du maillot" />
       </div>
       <div class="color-options">
-        <span class="color-label">Couleurs disponibles:</span>
+        <span class="color-label">Couleurs disponibles :</span>
         <span class="color-swatch red">Rouge</span>
       </div>
     </div>
@@ -74,10 +74,10 @@
 <!-- ══ TRUST BAR ══ -->
 <div class="trust-bar">
   <div class="container">
-    <div class="trust-item"><i class="fas fa-shield-halved"></i><span>Produit PUMA officiel</span></div>
+    <div class="trust-item"><i class="fas fa-shield-halved"></i><span>Produit PUMA Officiel</span></div>
     <div class="trust-item"><i class="fas fa-hand-holding-dollar"></i><span>Paiement à la livraison</span></div>
-    <div class="trust-item"><i class="fas fa-truck-fast"></i><span>Livraison en 24–72h</span></div>
-    <div class="trust-item"><i class="fab fa-whatsapp"></i><span>Support 7/7</span></div>
+    <div class="trust-item"><i class="fas fa-truck-fast"></i><span>Livraison 24–72h</span></div>
+    <div class="trust-item"><i class="fab fa-whatsapp"></i><span>Support 7j/7</span></div>
   </div>
 </div>
 
@@ -86,21 +86,21 @@
   <div class="container">
     <div class="section-header">
       <div class="section-tag">Offres spéciales</div>
-      <h2 class="section-title">Plus de maillots, plus d'économies</h2>
-      <p class="section-sub">Choisissez la bonne quantité et profitez de réductions exclusives</p>
+      <h2 class="section-title">Plus vous commandez, plus vous économisez</h2>
+      <p class="section-sub">Choisissez la quantité qui vous convient et profitez de nos remises exclusives</p>
     </div>
     <div class="pricing-grid">
       <div class="pricing-card" onclick="selectPricing(1,159)">
         <div class="qty-icons">👕</div>
-        <div class="qty-label">Maillot seul</div>
-        <div class="qty-name">Solo</div>
+        <div class="qty-label">1 maillot</div>
+        <div class="qty-name">Individuel</div>
         <div class="price-dh">159 <small>DH</small></div>
         <div class="price-save">Prix de base</div>
       </div>
       <div class="pricing-card featured" onclick="selectPricing(2,259)">
-        <div class="badge-best">⭐ Le plus populaire</div>
+        <div class="badge-best">⭐ Le plus demandé</div>
         <div class="qty-icons">👕👕</div>
-        <div class="qty-label">Deux maillots</div>
+        <div class="qty-label">2 maillots</div>
         <div class="qty-name">Duo</div>
         <div class="price-dh">259 <small>DH</small></div>
         <div class="price-save">Économisez 59 DH</div>
@@ -108,14 +108,14 @@
       <div class="pricing-card" onclick="selectPricing(3,329)">
         <div class="qty-icons">👕👕👕</div>
         <div class="qty-label">3 maillots</div>
-        <div class="qty-name">Triple</div>
+        <div class="qty-name">Trio</div>
         <div class="price-dh">329 <small>DH</small></div>
         <div class="price-save">Économisez 148 DH</div>
       </div>
       <div class="pricing-card" onclick="selectPricing(4,399)">
         <div class="qty-icons">👕👕👕👕</div>
         <div class="qty-label">4 maillots</div>
-        <div class="qty-name">Famille</div>
+        <div class="qty-name">Familial</div>
         <div class="price-dh">399 <small>DH</small></div>
         <div class="price-save">Économisez 237 DH 🔥</div>
       </div>
@@ -128,8 +128,8 @@
   <div class="container">
     <div class="section-header">
       <div class="section-tag">Guide des tailles</div>
-      <h2 class="section-title">Choisissez votre taille idéale</h2>
-      <p class="section-sub">Si vous hésitez entre deux tailles, choisissez la plus grande</p>
+      <h2 class="section-title">Choisissez votre taille</h2>
+      <p class="section-sub">En cas de doute entre deux tailles, choisissez la plus grande</p>
     </div>
     <div class="sizes-grid">
       <div class="size-card" onclick="selectSize('M',this)">
@@ -145,17 +145,17 @@
       <div class="size-card" onclick="selectSize('XL',this)">
         <div class="size-letter">XL</div>
         <div class="size-range">75–85 kg</div>
-        <div class="size-name">Extra Grand</div>
+        <div class="size-name">Très grand</div>
       </div>
       <div class="size-card" onclick="selectSize('XXL',this)">
         <div class="size-letter">XXL</div>
         <div class="size-range">85–95 kg</div>
-        <div class="size-name">Extra Extra Grand</div>
+        <div class="size-name">Extra large</div>
       </div>
     </div>
     <p style="text-align:center;color:var(--muted);font-size:0.83rem;margin-top:18px;">
       <i class="fas fa-circle-info" style="color:var(--gold-light)"></i>
-      Toutes les photos sont réelles — nous vous envoyons le produit exact montré.
+      Toutes les photos sont réelles — vous recevrez exactement le produit des photos
     </p>
   </div>
 </section>
@@ -165,48 +165,48 @@
   <div class="container">
     <div class="section-header">
       <div class="section-tag">Commande rapide</div>
-      <h2 class="section-title">Commandez maintenant</h2>
-      <p class="section-sub">Remplissez le formulaire — livraison sous 24 heures</p>
+      <h2 class="section-title">Commander maintenant</h2>
+      <p class="section-sub">Remplissez le formulaire — livraison en 24h</p>
     </div>
 
     <div class="order-wrap">
       <div class="order-header">
-        <h3>🛒 Formulaire de Commande</h3>
-        <p>Choisissez la quantité et les tailles, puis saisissez vos informations et nous vous contacterons via WhatsApp</p>
+        <h3>🛒 Formulaire de commande</h3>
+        <p>Choisissez la quantité et les tailles, puis entrez vos coordonnées et nous vous contacterons via WhatsApp</p>
       </div>
       <div class="order-body">
 
         <!-- Quantity selector -->
-        <p style="font-weight:700;margin-bottom:12px;font-size:0.9rem;color:#bbb;">Quantité:</p>
+        <p style="font-weight:700;margin-bottom:12px;font-size:0.9rem;color:#bbb;">Quantité :</p>
         <div class="qty-selector" id="qtySel">
           <div class="qty-btn active" data-qty="1" data-price="159" onclick="pickQty(this)">
             <div class="q-num">1</div>
-            <div class="q-label">Maillot</div>
+            <div class="q-label">maillot</div>
             <div class="q-price">159 DH</div>
           </div>
           <div class="qty-btn" data-qty="2" data-price="259" onclick="pickQty(this)">
-            <div class="q-badge">Le plus populaire</div>
+            <div class="q-badge">Le plus demandé</div>
             <div class="q-num">2</div>
-            <div class="q-label">Maillots</div>
+            <div class="q-label">maillots</div>
             <div class="q-price">259 DH</div>
-            <div class="q-save">Économisez 59 DH</div>
+            <div class="q-save">Éco. 59 DH</div>
           </div>
           <div class="qty-btn" data-qty="3" data-price="329" onclick="pickQty(this)">
             <div class="q-num">3</div>
-            <div class="q-label">Maillots</div>
+            <div class="q-label">maillots</div>
             <div class="q-price">329 DH</div>
-            <div class="q-save">Économisez 148 DH</div>
+            <div class="q-save">Éco. 148 DH</div>
           </div>
           <div class="qty-btn" data-qty="4" data-price="399" onclick="pickQty(this)">
             <div class="q-num">4</div>
-            <div class="q-label">Maillots</div>
+            <div class="q-label">maillots</div>
             <div class="q-price">399 DH</div>
-            <div class="q-save">Économisez 237 DH 🔥</div>
+            <div class="q-save">Éco. 237 DH 🔥</div>
           </div>
         </div>
 
         <!-- Per-shirt detail rows -->
-        <p style="font-weight:700;margin-bottom:12px;font-size:0.9rem;color:#bbb;">Détails de la commande:</p>
+        <p style="font-weight:700;margin-bottom:12px;font-size:0.9rem;color:#bbb;">Détails de la commande :</p>
         <div class="order-items" id="orderItems">
           <!-- dynamically generated -->
         </div>
@@ -220,13 +220,13 @@
           </div>
           <div class="form-field" id="field-phone">
             <label>Numéro de téléphone *</label>
-            <input type="tel" id="cPhone" placeholder="+33612345678" />
+            <input type="tel" id="cPhone" placeholder="06XXXXXXXX" />
             <span class="err">Numéro de téléphone invalide</span>
           </div>
           <div class="form-field full" id="field-city">
             <label>Ville *</label>
             <input type="text" id="cCity" placeholder="Casablanca, Rabat, Marrakech..." />
-            <span class="err">Veuillez saisir une ville</span>
+            <span class="err">Veuillez entrer votre ville</span>
           </div>
           <div class="form-field full">
             <label>Adresse (optionnel)</label>
@@ -244,22 +244,22 @@
         </div>
 
         <button class="btn-submit" id="submitBtn" onclick="submitOrder()">
-          <i class="fab fa-whatsapp"></i> Soumettre la Commande
+          <i class="fab fa-whatsapp"></i> Envoyer la commande
         </button>
 
         <div class="form-trust">
           <span><i class="fas fa-shield-halved"></i> Paiement à la livraison</span>
-          <span><i class="fas fa-truck-fast"></i> Livraison en 24–72h</span>
-          <span><i class="fab fa-whatsapp"></i> Confirmation instantanée</span>
+          <span><i class="fas fa-truck-fast"></i> Livraison 24–72h</span>
+          <span><i class="fab fa-whatsapp"></i> Confirmation immédiate</span>
         </div>
 
         <div class="msg success" id="msgSuccess">
-          <h4><i class="fas fa-circle-check"></i> Votre commande a été envoyée avec succès! Merci beaucoup.</h4>
-          <p>Notre équipe vous contactera bientôt sur WhatsApp pour confirmer la commande et la livraison.</p>
+          <h4><i class="fas fa-circle-check"></i> Commande envoyée avec succès ! Merci.</h4>
+          <p>Notre équipe vous contactera bientôt via WhatsApp pour confirmer la commande et la livraison.</p>
         </div>
         <div class="msg error-msg" id="msgError">
           <h4><i class="fas fa-circle-exclamation"></i> Erreur</h4>
-          <p id="msgErrorText">Veuillez remplir correctement tous les champs requis.</p>
+          <p id="msgErrorText">Veuillez remplir tous les champs obligatoires correctement.</p>
         </div>
 
       </div>
@@ -271,29 +271,29 @@
 <section class="section section-alt">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">Pourquoi M&A Elite Kits ?</div>
-      <h2 class="section-title">Pourquoi Choisir M&A Elite Kits?</h2>
+      <div class="section-tag">Pourquoi choisir M&A Elite Kits ?</div>
+      <h2 class="section-title">Nos avantages</h2>
     </div>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
-        <h4>Livraison Rapide</h4>
-        <p>Livraison rapide et sécurisée à votre adresse</p>
+        <h4>Livraison 24–72h</h4>
+        <p>Partout au Maroc — y compris les petites villes</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-hand-holding-dollar"></i></div>
         <h4>Paiement à la livraison</h4>
-        <p>Payez lorsque votre colis arrive — aucun paiement à l'avance</p>
+        <p>Payez à réception de votre colis — aucun risque, aucune surprise</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-certificate"></i></div>
-        <h4>Qualité Supérieure</h4>
-        <p>Les meilleures matières premières utilisées dans l'industrie</p>
+        <h4>Haute qualité</h4>
+        <p>Les meilleurs matériaux utilisés dans l'industrie</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="fab fa-whatsapp"></i></div>
-        <h4>Support 7/7</h4>
-        <p>Nous répondons rapidement sur WhatsApp du matin au soir</p>
+        <h4>Support 7j/7</h4>
+        <p>Nous répondons sur WhatsApp rapidement de 8h à 22h</p>
       </div>
     </div>
   </div>
@@ -305,12 +305,11 @@
     <div class="section-header">
       <div class="section-tag">Informations importantes</div>
       <h2 class="section-title">Nos politiques</h2>
-      <p class="section-sub">Transparence totale à chaque étape de votre commande</p>
+      <p class="section-sub">Une transparence totale à chaque étape de votre commande</p>
     </div>
 
     <div class="policies-list">
 
-      <!-- 1. Paiement à la livraison -->
       <div class="policy-item" id="pol-1">
         <button class="policy-trigger" onclick="togglePolicy('pol-1')">
           <span class="policy-icon"><i class="fas fa-hand-holding-dollar"></i></span>
@@ -319,24 +318,22 @@
         </button>
         <div class="policy-body">
           <div class="policy-body-title">Politique de paiement à la livraison</div>
-          <p>Nous proposons le paiement à la livraison partout au Maroc. Vous payez en espèces au livreur sans aucun paiement à l'avance. Le montant affiché est final, livraison incluse.</p>
+          <p>Nous proposons le paiement à la livraison dans tout le Maroc. Vous payez en espèces au livreur, sans aucun paiement anticipé. Le montant indiqué est le montant final, livraison incluse.</p>
         </div>
       </div>
 
-      <!-- 2. Garantie 7 jours -->
       <div class="policy-item" id="pol-2">
         <button class="policy-trigger" onclick="togglePolicy('pol-2')">
           <span class="policy-icon"><i class="fas fa-medal"></i></span>
-          <span class="policy-label">Garantie de 7 jours</span>
+          <span class="policy-label">Garantie 7 jours</span>
           <span class="policy-chevron"><i class="fas fa-chevron-down"></i></span>
         </button>
         <div class="policy-body">
-          <div class="policy-body-title">Garantie de 7 jours</div>
-          <p>Vous disposez de 7 jours après réception de votre commande pour demander un remboursement ou un échange. Pour toute demande، contactez-nous via WhatsApp ou notre page Contactez-nous.</p>
+          <div class="policy-body-title">Garantie 7 jours</div>
+          <p>Vous disposez de 7 jours après réception de la commande pour demander un remboursement ou un échange. Pour toute demande, contactez-nous via WhatsApp ou via la page contact.</p>
         </div>
       </div>
 
-      <!-- 3. Livraison -->
       <div class="policy-item" id="pol-3">
         <button class="policy-trigger" onclick="togglePolicy('pol-3')">
           <span class="policy-icon"><i class="fas fa-box"></i></span>
@@ -345,11 +342,10 @@
         </button>
         <div class="policy-body">
           <div class="policy-body-title">Politique de livraison</div>
-          <p>Nous livrons partout au Maroc sous 2 à 4 jours ouvrables. La livraison est gratuite sur toutes les commandes.</p>
+          <p>Nous livrons dans tout le Maroc en 2 à 4 jours ouvrables. La livraison est gratuite sur toutes les commandes.</p>
         </div>
       </div>
 
-      <!-- 4. Retour -->
       <div class="policy-item" id="pol-4">
         <button class="policy-trigger" onclick="togglePolicy('pol-4')">
           <span class="policy-icon"><i class="fas fa-rotate-left"></i></span>
@@ -358,7 +354,7 @@
         </button>
         <div class="policy-body">
           <div class="policy-body-title">Politique de retour</div>
-          <p>Vous disposez de 7 jours après réception de votre commande pour retourner un article. Le produit doit être retourné dans son état d'origine، non porté et non lavé. Pour initier un retour، contactez-nous via WhatsApp ou notre page Contactez-nous.</p>
+          <p>Vous disposez de 7 jours après réception pour retourner un produit. Celui-ci doit être dans son état d'origine, non utilisé et non lavé. Pour initier un retour, contactez-nous via WhatsApp ou via la page contact.</p>
         </div>
       </div>
 
@@ -375,13 +371,13 @@
           <div class="logo-badge" style="width:38px;height:38px;background:linear-gradient(135deg,var(--red),var(--red-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;color:#fff;font-size:15px;"></div>
           <span style="font-weight:900;color:var(--white)">M&A Elite Kits</span>
         </div>
-        <p>Maillot officiel de l'équipe du Maroc — Allez Lions de l'Atlas, Coupe du Monde 2026 🇲🇦</p>
+        <p>Maillot officiel de l'équipe nationale marocaine — Allez les Lions de l'Atlas, Coupe du Monde 2026 🇲🇦</p>
         <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px;">
           <a href="https://wa.me/{{ whatsapp_phone|replace('+','')|replace(' ','')|replace('-','') }}" target="_blank" class="footer-wa" style="display:flex;align-items:center;gap:8px;">
-            <i class="fab fa-whatsapp" style="font-size:18px;"></i> Contactez-nous via WhatsApp
+            <i class="fab fa-whatsapp" style="font-size:18px;"></i> Contactez-nous sur WhatsApp
           </a>
           <div style="display:flex;gap:10px;align-items:center;">
-            <span style="font-size:12px;color:rgba(255,255,255,0.7);">Suivez-nous:</span>
+            <span style="font-size:12px;color:rgba(255,255,255,0.7);">Suivez-nous :</span>
             <a href="https://www.facebook.com/share/1YDgTBZDVS/" target="_blank" title="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:#1877F2;border-radius:50%;color:white;transition:all 0.3s ease;text-decoration:none;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 4px 12px rgba(24,119,242,0.4)';" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='none';">
               <i class="fab fa-facebook-f"></i>
             </a>
@@ -400,12 +396,12 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Garanties de qualité</h5>
+        <h5>Garanties qualité</h5>
         <ul>
-          <li>🛡️ Produit officiel PUMA</li>
+          <li>🛡️ Produit PUMA officiel</li>
           <li>💳 Paiement à la livraison</li>
           <li>🚚 Livraison rapide 24–72h</li>
-          <li>📸 Photos réelles</li>
+          <li>📸 Photos réelles du produit</li>
         </ul>
       </div>
     </div>
@@ -415,15 +411,14 @@
   </div>
 </footer>
 
-
 <!-- ══ SCRIPTS ══ -->
 <script>
   window.APP = {
     PRICES: {{ {'1':159,'2':259,'3':329,'4':399} | tojson }},
     SIZES: {{ ['M','L','XL','XXL'] | tojson }},
     COLORS: ["Rouge"],
-    ORDER_ITEM_LABEL: "Maillot",
-    MSG_INVALID_ORDER: "Veuillez remplir correctement tous les champs requis.",
+    ORDER_ITEM_LABEL: "maillot",
+    MSG_INVALID_ORDER: "Veuillez remplir tous les champs obligatoires correctement.",
     WA_NUM: '{{ whatsapp_phone|replace("+","") }}'
   };
 </script>

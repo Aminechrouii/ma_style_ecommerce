@@ -11,6 +11,11 @@
     --error-color: #e74c3c;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    /* Missing variables used in HTML */
+    --red: #c8102e;
+    --red-dark: #a50d25;
+    --gold-light: #d4af37;
+    --muted: #888;
 }
 
 * {
@@ -320,7 +325,8 @@ textarea {
 
 .section-header {
     max-width: 720px;
-    margin-bottom: 36px;
+    margin: 0 auto 36px auto;
+    text-align: center;
 }
 
 .section-tag {
@@ -799,108 +805,154 @@ select {
     transform: translateY(-2px);
 }
 
-/* Responsive adjustments for mobile/tablet */
-@media (max-width: 900px) {
+/* ══ RESPONSIVE — Clean breakpoint system ══ */
+
+/* Tablet: 768px - 1024px */
+@media (max-width: 1024px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .features-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile: max 768px */
+@media (max-width: 768px) {
     .container {
-        padding: 0 14px;
+        padding: 0 16px;
     }
 
+    /* Navbar */
     .navbar .container {
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 6px;
     }
-
     .navbar-lang {
         order: 2;
         width: 100%;
         justify-content: center;
-        margin-top: 8px;
     }
-
     .navbar-ctas {
         order: 3;
         width: 100%;
         justify-content: center;
-        gap: 8px;
     }
 
+    /* Hero */
     .hero {
         padding: 36px 0;
     }
-
     .hero .container {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 28px;
     }
-
+    .hero-subtitle {
+        max-width: 100%;
+    }
     .main-image-wrap {
         min-height: 280px;
         border-radius: 20px;
     }
-
-    .gallery-strip {
-        display: flex;
-        gap: 10px;
-        overflow-x: auto;
-        padding-bottom: 6px;
+    .hero-actions {
+        flex-direction: column;
     }
-
-    .gallery-thumb {
-        flex: 0 0 84px;
-        width: 84px;
-        height: 84px;
-    }
-
-    .hero-subtitle {
-        max-width: 100%;
-    }
-
-    .pricing-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .sizes-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .features-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .trust-bar .container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .order-wrap {
-        padding: 20px;
-    }
-
-    .qty-selector {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .order-item {
-        grid-template-columns: 48px 1fr;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 1.6rem;
-    }
-
     .btn-primary, .btn-wa, .btn-submit {
         width: 100%;
         justify-content: center;
         padding: 14px 18px;
+    }
+
+    /* Gallery */
+    .gallery-strip {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .gallery-thumb {
+        flex: 0 0 80px;
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Trust bar */
+    .trust-bar .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Section */
+    .section {
+        padding: 50px 0;
+    }
+    .section-header {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    /* Sizes */
+    .sizes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Features */
+    .features-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Order form */
+    .order-wrap {
+        padding: 20px;
+        border-radius: 22px;
+    }
+    .qty-selector {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-field.full {
+        grid-column: span 1;
+    }
+    .order-item {
+        grid-template-columns: 48px 1fr;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Navbar brand */
+    .navbar-brand span {
+        font-size: 1.4rem;
+    }
+}
+
+/* Small mobile: max 480px */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-bar .container {
+        grid-template-columns: 1fr;
     }
 
     .navbar-brand span {
@@ -913,117 +965,21 @@ select {
         width: 52px;
         height: 52px;
     }
-}
-
-
-@media (max-width: 1024px) {
-    .hero .container,
-    .pricing-grid,
-    .sizes-grid,
-    .features-grid,
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 0 16px;
-    }
-
-    .hero {
-        padding: 40px 0;
-    }
-
-    .hero .container {
-        gap: 32px;
-    }
-
-    .trust-bar .container {
-        grid-template-columns: 1fr;
-    }
-
-    .pricing-grid {
-        gap: 16px;
-    }
-
-    .section {
-        padding: 50px 0;
-    }
-
-    .qty-selector,
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 32px 0;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
 
     .pricing-card,
     .size-card,
-    .order-wrap,
     .feature-card,
-    .policy-item,
-    .footer-col {
-        border-radius: 20px;
-    }
-
-    .gallery-strip {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    .policy-item {
+        border-radius: 18px;
     }
 
     .order-item {
         grid-template-columns: 1fr;
     }
-}
-
-/* Mobile: force horizontal rows and enable horizontal scrolling for specific sections */
-@media (max-width: 600px) {
-    .gallery-strip {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        gap: 8px !important;
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 8px;
-    }
 
     .gallery-thumb {
-        flex: 0 0 20% !important;
-        max-width: 20% !important;
-        height: auto !important;
-        aspect-ratio: 1/1;
+        flex: 0 0 70px;
+        width: 70px;
+        height: 70px;
     }
-
-    .trust-bar .container,
-    .pricing-grid,
-    .sizes-grid,
-    .features-grid {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        gap: 12px !important;
-        overflow-x: auto !important;
-        padding-bottom: 8px;
-    }
-
-    .trust-item,
-    .pricing-card,
-    .size-card,
-    .feature-card {
-        flex: 0 0 auto !important;
-        min-width: 180px;
-    }
-
-    .pricing-card { min-width: 260px; }
-    .size-card { min-width: 140px; }
-    .feature-card { min-width: 200px; }
 }
-
-
