@@ -384,9 +384,20 @@
           <span style="font-weight:900;color:var(--white)">M&A Elite Kits</span>
         </div>
         <p>قميص المنتخب المغربي الأصلي — هيا أسود الأطلس، كأس العالم 2026 🇲🇦</p>
-        <a href="https://wa.me/{{ whatsapp_phone|replace('+','')|replace(' ','')|replace('-','') }}" target="_blank" class="footer-wa">
-          <i class="fab fa-whatsapp"></i> اتصل بنا عبر واتساب
-        </a>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px;">
+          <a href="https://wa.me/{{ whatsapp_phone|replace('+','')|replace(' ','')|replace('-','') }}" target="_blank" class="footer-wa" style="display:flex;align-items:center;gap:8px;">
+            <i class="fab fa-whatsapp" style="font-size:18px;"></i> اتصل بنا عبر واتساب
+          </a>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span style="font-size:12px;color:rgba(255,255,255,0.7);">تابعنا على:</span>
+            <a href="https://www.facebook.com/share/1YDgTBZDVS/" target="_blank" title="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:#1877F2;border-radius:50%;color:white;transition:all 0.3s ease;text-decoration:none;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 4px 12px rgba(24,119,242,0.4)';" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='none';">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/maelitekits?igsh=ZWFlODFicHoyeDN5" target="_blank" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:linear-gradient(45deg,#f77737,#feda75,#d52e7f,#462cb9);border-radius:50%;color:white;transition:all 0.3s ease;text-decoration:none;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 4px 12px rgba(217,46,127,0.4)';" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='none';">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
       </div>
       <div class="footer-col">
         <h5>روابط سريعة</h5>
