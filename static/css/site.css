@@ -799,6 +799,123 @@ select {
     transform: translateY(-2px);
 }
 
+/* Responsive adjustments for mobile/tablet */
+@media (max-width: 900px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    .navbar .container {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .navbar-lang {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    .navbar-ctas {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .hero {
+        padding: 36px 0;
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .main-image-wrap {
+        min-height: 280px;
+        border-radius: 20px;
+    }
+
+    .gallery-strip {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 6px;
+    }
+
+    .gallery-thumb {
+        flex: 0 0 84px;
+        width: 84px;
+        height: 84px;
+    }
+
+    .hero-subtitle {
+        max-width: 100%;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sizes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .trust-bar .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .order-wrap {
+        padding: 20px;
+    }
+
+    .qty-selector {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-item {
+        grid-template-columns: 48px 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .btn-primary, .btn-wa, .btn-submit {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 18px;
+    }
+
+    .navbar-brand span {
+        font-size: 1.2rem;
+    }
+
+    .float-wa {
+        right: 12px;
+        bottom: 12px;
+        width: 52px;
+        height: 52px;
+    }
+}
+
+
 @media (max-width: 1024px) {
     .hero .container,
     .pricing-grid,
